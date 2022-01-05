@@ -7,6 +7,13 @@
 
 Climate change has brought on numerous problems, for the scope of this project we will tackle on drought.  Drought can impact our food resources, impact citizens in certain areas, our agricultural industries and needs to be addressed by policy makers.  We are looking to work on a datetime series neural networks model, where we use historical drought data in order to predict future droughts from occurring.  
 
+## Description of Dataset
+
+### Datasets Collection
+
+### Data Dictionary
+
+
 ### Background Research
 
 **Climate Change**
@@ -33,3 +40,10 @@ The USDM website itself explains that its map identifies areas of drought and la
 The USDM includes Standardized Precipitation Index(SPI), Palmer Drought Severity Index(PDSI), USGS Weekly Streamflow(percentiles), CPC Soil Moisture Models(percentiles) and Objective Drought indicator blends(percentiles).  The USDM relies on experts to synthesize this data and work with local observers to interpret the information.  The USDM makes clear that it is not a forecast, it looks backward which is why we thought it would be good to add a predictive component to this tool via a Date Time Series model.
 
 **References**
+
+## Data Visualizations & Analysis
+
+## Datetime Series models
+
+
+## Conclusions
