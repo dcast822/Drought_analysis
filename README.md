@@ -74,9 +74,9 @@ Another indicator we wanted to pair with our data was temperature.  As we also h
 
 ## Data Visualizations & Analysis
 
-![Average DSCI by Region!](./images/avg_dsci_region.png "Average DSCI by Region)")
+![Sum of Precipitation per Region!](./images/sum_prcp_regions.png "Sum of Precipitation per Region)")
 
-![DSCI (2000-2021)!](./images/DSCI_region.png "DSCI (2000-2021)")
+![Mean of Max Temperature per Climate Regions!](./images/max_temp_regions.png 'Mean of Max Temperature per Climate Regions)')
 
 
 ## DateTime Series models
