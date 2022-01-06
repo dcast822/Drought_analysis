@@ -5,7 +5,7 @@
 
 ### Problem statement
 
-Climate change has brought on numerous problems, for the scope of this project we will tackle on drought.  Drought can impact our food resources, impact citizens in certain areas, our agricultural industries and needs to be addressed by policy makers.  We are looking to work on a datetime series neural networks model, where we use historical drought data in order to predict future droughts from occurring.  
+Climate change has brought on numerous problems, for the scope of this project we will tackle on drought.  Drought can impact our food resources, impact citizens in certain areas, our agricultural industries and needs to be addressed by policy makers.  We are looking to work on a datetime series neural networks model, where we use historical drought data  in order to predict future droughts from occurring. The US Drought Monitor only looks back at historical data and this is a nice complement to what that provides.  Additionally we have temperature and precipitation data from which we can gather plenty of inference.
 
 ## Description of Dataset
 
@@ -13,7 +13,46 @@ Climate change has brought on numerous problems, for the scope of this project w
 
 Dataset was obtained from the United States Drought Monitor website at https://droughtmonitor.unl.edu/DmData/DataDownload.aspx.  Also, the temperature and precipitation data attributed to Yuchuan Lai, at the institution of Carnegie Mellon University and was retrieved from https://kilthub.cmu.edu/articles/dataset/Assessment_of_historical_annual_temperature_and_precipitation_indices_change_in_the_U_S_cities/7961012.  
 
+**USDM D Categories**
+
+| Category |                                                                                                                                                                                                              Observed impacts                                                                                                                                                                                                              |
+|----------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|    D0    |     Forage   crops and pasture are stressed; producers feed livestock early     Ground   is hard  Agriculture   ponds and creeks begin to decline                                                                                                                                                                                                                                                                                          |
+|    D1    | Cash crop growth and yield are low  National forests implement campfire and firework banks  Streams and ponds are low  Fire activity increases                                                                                                                                                                                                                                                                                             |
+|    D2    | Crops are damaged, especially dryland corn  Burn Bans begin  Large Cracks appear in foundations of homes  Large Surface Water levels drop; agricultural ponds and streams have dried up  Saltwater intrusion occurs in rivers and bays; saltwater wildlife migrate upstream  Hydroelectric power decreases; navigation is limited                                                                                                          |
+|    D3    | Soybean pods shatter  Large-scale hay shortages occur; producers sell livestock  Wildfire count and fire danger continue to increase  Landscape Growth is stunted and needs irrigation; Christmas Tree Growth is stunted  Ground has noticeable cracks; road damage has occurred  Low Flow in rivers and lakes affects recreation  Water mains break daily in large municipalities; water conservation is implemented  Air quality is poor |
+|    D4    | Trees and shrubs are defoliated; grass is brown, landscaping projects are delayed  Wildfire counts is very high.        |                                                                                                     <br>                                                                                           Courtesy of U.S. Drought Monitor        
+<br>
+
 ### Data Dictionary
+| Feature               | Type     | Dataset                  | Description                                |
+|-----------------------|----------|--------------------------|--------------------------------------------|
+| ValidEnd              | *object* | merged_drought_temp_prec | Date where the week ends.                  |
+| Name                  | *object* | merged_drought_temp_prec | State Name(U.S)                            |
+| state                 | *object* | merged_drought_temp_prec | State abbreviation(U.S)                    |
+| area_none             | *float*  | merged_drought_temp_prec | Total area not affected                    |
+| area_d0               | *float*  | merged_drought_temp_prec | Total area under D0                        |
+| area_d1               | *float*  | merged_drought_temp_prec | Total area under D1                        |
+| area_d2               | *float*  | merged_drought_temp_prec | Total area under D2                        |
+| area_d3               | *float*  | merged_drought_temp_prec | Total area under D3                        |
+| area_d4               | *float*  | merged_drought_temp_prec | Total area under D4                        |
+| population_none       | *float*  | merged_drought_temp_prec | Total population not affected              |
+| population_d1         | *float*  | merged_drought_temp_prec | Total population under D0                  |
+| population_d2         | *float*  | merged_drought_temp_prec | Total population under D1                  |
+| population_d2         | *float*  | merged_drought_temp_prec | Total population under D2                  |
+| population_d3         | *float*  | merged_drought_temp_prec | Total population under D3                  |
+| population_d4         | *float*  | merged_drought_temp_prec | Total population under D4                  |
+| DSCI                  | *int*    | merged_drought_temp_prec | Drought Severity and Coverage Index        |
+| total_area            | *float*  | merged_drought_temp_prec | Total area impacted D0-D4                  |
+| total_population      | *float*  | merged_drought_temp_prec | Total population impacted D0-D4            |
+| avg_tmax              | *float*  | merged_drought_temp_prec | Average max temperature                    |
+| avg_tmin              | *float*  | merged_drought_temp_prec | Average minimum temperature                |
+| total_avg_prcp_inches | *float*  | merged_drought_temp_prec | Total average precipitation in inches      |
+| total_avg_prcp_mm     | *float*  | merged_drought_temp_prec | Total average precipitation in millimeters |
+| climate_regions       | *float*  | merged_drought_temp_prec | One of the 9 United States climate regions |
+
+
+
 
 
 ### Background Research
@@ -46,6 +85,8 @@ The USDM includes Standardized Precipitation Index(SPI), Palmer Drought Severity
 
 The Drought Severity and Coverage Index(DSCI) is a method for converting drought levels from the Drought Monitor map to a single value for an area.  The DSCI ranges from 0 to 500 where 0 indicates that none of the area is abnormally dry or in drought, and 500 indicates that all areas are in D4(exceptional drought)(n.d Drought Monitor).
 
+![Example of DSCI Calculation!](./images/Drought_Severity_and_Coverage_Index___U_S__Drought_Monitor.png "Example of DSCI Calculation)")
+
 **Precipitation**
 
 We also wanted to include precipitation data as we wanted to explore the relationships between this and droughts.  In the United States there is a big variance in terms of regions that are wet and dry.  It is not uncommon for a tropical storm to deliver record-breaking rain in a city like New York, or how flash floods can devastate a place like central Tennessee(Bhatia & Popovich, 2021).  The opposite is true in the west where there is a longterm precipitation shortfall, it is a case of two extremes worsening(Bhatia & Popovich, 2021). In fact "precipitation is one of the key climate variables", wheree changes in precipitation in either direction are getting bigger"(Dai, 2021).
@@ -74,9 +115,9 @@ Another indicator we wanted to pair with our data was temperature.  As we also h
 
 ## Data Visualizations & Analysis
 
-![Sum of Precipitation per Region!](./images/sum_prcp_regions.png "Sum of Precipitation per Region)")
-
-![Mean of Max Temperature per Climate Regions!](./images/max_temp_regions.png 'Mean of Max Temperature per Climate Regions)')
+![Sum of Precipitation per Region!](./images_j/Average_DSCI_by years.png "Sum of Precipitation per Region)")
+![!](./images_j/Average_DSCI_by years.png 'Average DSCI by years')
+![Mean of Max Temperature per Climate Regions!](./images_DC/max_temp_regions.png 'Mean of Max Temperature per Climate Regions)')
 
 
 ## DateTime Series models
