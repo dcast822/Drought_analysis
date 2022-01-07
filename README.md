@@ -115,12 +115,92 @@ Another indicator we wanted to pair with our data was temperature.  As we also h
 
 ## Data Visualizations & Analysis
 
-![Sum of Precipitation per Region!](./images_j/Average_DSCI_by years.png "Sum of Precipitation per Region)")
-![!](./images_j/Average_DSCI_by years.png 'Average DSCI by years')
-![Mean of Max Temperature per Climate Regions!](./images_DC/max_temp_regions.png 'Mean of Max Temperature per Climate Regions)')
+### Regional Visualizations
+
+![Average DSCI(2001-2020)!](./images/Average_DSCI_by_years.png "Average DSCI(2001-2020))")
+<br>
+We see DSCI peaks in the years ranging from 2002-2003, 2007 and 2012.
+
+![Average DSCI !](./images/Average_DSCI_of_20.png "Average DSCI")
+<br>
+Regions with highest DSCI are the West, Southwest, Northwest and Norther Rocky & Plains.
+
+![Average Temperature Climate Regions(years)!](./images/Average_temp_by_years.png 'Average Temperature Climate Regions(years)')
+<br>
+Average Max temperatures are high across the years supporting the background research.
+
+![Average Max Temps by Climate Region!](./images/Average_temperature_of_20.png 'Average Max Temps by Climate Region')
+<br>
+Higher average max temperatures can be seen in the southern regions; southeast, south and southwest.
+
+![Average Precipitation(2001-2020)!](./images/Average_prec_by_years.png "Average Precipitation(years)")
+
+![Average Precipitation!](./images/Average_prec.png "Average Precipitation")
+<br>
+To look for a relationship with drought we can look to the regions with the least amount of precipitation; west, southeast, northwest and northern rockies and plains.  
+
+![DSCI Boxplot(Regions)!](./images/boxplot_DSCI.png 'DSCI Boxplot')
+
+![DSCI Boxplot(States)!](./images/drought_boxplot_states.png)
+
+![Time Series DSCI (4 Regions)!](./images/time_serie_3_drought_regions.png 'Time Series DSCI(4 Regions)')
+
+![Time Series Temp(4 Regions)!](./images/time_serie_temp_3_regions.png 'Time Series Temp(4 Regions)')
+
+![Time Series Precipitation(4 Regions)!](./images/time_serie_3_prec_regions.png 'Time Series Precipitation(4 Regions)')
+
+### State Visualizations
+
+![Time Series Analysis of Western Region!](./images/Time_series_west.png 'Time Series Analysis of Western Region')
+
+![Time Series Analysis of Southwest!](./images/Time_series_southwest.png 'Time Series Analysis of Southwest')
+
+![Time Series Analysis of Northern Rockies and Plains Analysis!](./images/Time_series_rockies.png 'Time Series Analysis of Northern Rockies and Plains Analysis')
+
+![Time Series Analysis Northwest!](./images/Time_series_northwest.png 'Time Series Analysis Northwest')
+<br>
+In these time series analysis of the regions we can see how the valleys in precipitation usually equate to rises in DSCI for the same time period.  The consistent wavelengths for temperature signify the change in seasons.
+
+![Time Series DSCI(4 States)!](./images/time_serie_4_states_2020.png 'Time Series DSCI(4 States)')
+
+![Time Series Temp(4 States)!](./images/time_serie_temp_4_states_20202.png 'Time Series Temp(4 States)')
+
+![Time Series Precipitation(4 States)!](./images/time_serie_precip_4_states_2020.png 'Time Series Precipitation(4 States)')
+
+![Time Series of Ohio!](./images/time_serie_ohio_2020_3_graphs.png 'Time Series of Ohio')
+
+![Time Series of Utah!](./images/time_serie_utah_2020_3_graphs.png '')
+
+![National Drought average over 20 years!](./images/map.gif 'National Drought average over 20 years')
+
+Great visualization for where the drought occurs across the last two decades.
+
 
 
 ## DateTime Series models
 
+### LSTM Prediction Model
+![LSTM Prediction Model!](./images/dsci_predsvs_actuals.png 'LSTME Prediction Model')
+![LSTM MSE Loss](./images/lstm_mse_loss.png 'LSTM MSE Loss')
+![LSTM Preds Vs Actual on Validation Date!](./images/dsci_preds_actuals_val.png 'LSTM Preds Vs Actual on Validation Date')
+![LSTM Preds Vs Actual on Test Data!](./images/dsci_preds_actuals_test.png 'LSTM Preds Vs Actual on Test Data')
+![LSTM Prediction Model!](./images/dsci_preds_actuals.png 'LSTM Prediction Model')
 
+### CNN Prediction Model
+![CNN Prediction Model!](./images/dsci_preds_actuals2.png 'CNN Prediction Model')
+![CNN MSE Loss!](./images/cnn_mse_loss.png)
+
+### GRU Prediction Model
+![GRU Prediction Model!](./images/dsci_preds_act3.png 'GRU Prediction Model')
+![GRU MSE Loss!](./images/gru_mse_loss.png 'GRU MSE Loss')
+
+### LSTM Prediction Model(MV time)
+![LSTM Prediction Model(MV time)!](./images/lstm_mv_time.png 'LSTM')
+
+![LSTM MSE(Time Feature)Loss!](./images/lstm_mse_time_loss.png 'LSTM MSE(Time Feature)Loss')
+
+### LSTM Prediction Model(MV Time & High Temp)
+
+
+![LSTM MSE Loss(high temp & time features)!](./images/)
 ## Conclusions
