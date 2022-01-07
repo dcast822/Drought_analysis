@@ -5,7 +5,7 @@
 
 ### Problem statement
 
-Climate change has brought on numerous problems, for the scope of this project we will tackle on drought.  Drought can impact our food resources, impact citizens in certain areas, our agricultural industries and needs to be addressed by policy makers.  We are looking to work on a datetime series neural networks model, where we use historical drought data  in order to predict future droughts from occurring. The US Drought Monitor only looks back at historical data and this is a nice complement to what that provides.  Additionally we have temperature and precipitation data from which we can gather plenty of inference.
+Climate change has brought on numerous problems, for the scope of this project we will tackle on drought.  Drought can impact our food resources, impact citizens in certain areas, our agricultural industries and needs to be addressed by policy makers.  We are looking to work on a datetime series neural networks model, where we use historical drought data  in order to predict future droughts from occurring. This model will be optimized via the rmse and val loss. The US Drought Monitor only looks back at historical data and this is a nice complement to what that provides since essentially this is an attempt at forecasting.  Additionally we have temperature and precipitation data from which we can gather plenty of inference and build on top of our model.
 
 ## Description of Dataset
 
@@ -67,7 +67,6 @@ Climate can vary and some years are hotter/colder than others, some decades can 
 **Droughts**
 
 A drought can be generally understood as "a period of abnormally dry weather that goes on for long enough to have an impact on water supplies, farming, livestock operations, energy production and other activities"(Fountain, 2021). Droughts begin with less than normal precipitation which varies depending on the region. At the root of droughts are warmer temperatures and changing precipitation patterns, which are linked to emissions of carbon dioxide and other greenhouse gases into the atmosphere, where they trap the sun's heat(Fountain,2021). Excessive heat from climate change leads to winter snowpack melting faster affecting the availability of water throughout the year(Fountain,2021).
-
 
 With respect to droughts, climate change has worsened them through the increasing evaporation, which has also lead to increased crop failures and risk of severe wildfires(Fountain,2021). According to the analysis of soil moisture content, "the drought that afflicted the American Southwest from 2000 to 2018 was almost 50 percent more severe because of climate change"(Fountain, 2020).  It was the worst drought in the region in over 1000 years(Rosen, 2021). Conditions are also of historic proportions in California, into the Pacific Northwest, much of the Intermountain West, and even the Northern Plains(Fountain, 2021).
 
@@ -200,7 +199,22 @@ Great visualization for where the drought occurs across the last two decades.
 ![LSTM MSE(Time Feature)Loss!](./images/lstm_mse_time_loss.png 'LSTM MSE(Time Feature)Loss')
 
 ### LSTM Prediction Model(MV Time & High Temp)
+![LSTM MSE High Temp & Time Features!](./images/high_temp_preds_actuals.png)
 
-
-![LSTM MSE Loss(high temp & time features)!](./images/)
+![LSTM MSE Loss(high temp & time features)!](./images/high_temp_mse_loss.png 'LSTM MSE Loss(high temp & Time Features)')
 ## Conclusions
+
+As we have been able to verify, temperature and precipitation are factors that significantly affect drought. We can also verify that drought and precipitation do not have a cycle or frequency like temperature.
+After the analysis of the drought, we see that it varies depending on the region, for example the regions that are located in the south; We see that they have a higher degree of drought compared to the regions that are further north. If we analyze the states, we can see the same pattern of drought, with the exception of some cases where some states have a much higher peak than the average.
+
+As far as modeling, CNN performed the best of all of our models. We will be able to use these techniques on other regions of the US.
+
+We recommend that the drought monitor goes by daily DSCI measurements to get more accurate predictions and to test more multivariate models.
+
+We need more data on the multivariate models.
+
+### Next Steps
+
+* Use modeling techniques at state levels.
+* Add predictability function to streamlit app.
+* Look for more robust temperature & precipitation dataset.
