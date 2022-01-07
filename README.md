@@ -112,6 +112,12 @@ Another indicator we wanted to pair with our data was temperature.  As we also h
 
 * (n.d.) U.S. Drought Monitor. What is the USDM. Retrieved from https://droughtmonitor.unl.edu/About/WhatistheUSDM.aspx
 
+## Notebook organization
+* code_notebook_dc contains collaborative code for the EDA process from David.
+* data_dc contains the versions of the data that David worked with.
+* Educational_experimental_dc were notebooks that were simply part of the iterative and educational process that are **not** directly relevant to the final version of the project.
+* images is the source of the images used for the readme file as well as the presentation slides.
+
 ## Data Visualizations & Analysis
 
 ### Regional Visualizations
